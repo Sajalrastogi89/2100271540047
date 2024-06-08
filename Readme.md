@@ -11,40 +11,40 @@ Develop an Average Calculator microservice that exposes a REST API `numbers/{num
 **Request**: `GET http://localhost:8080/numbers/p`
 
 **First Request**:
-![Prime Numbers Request](Screenshot%202024-06-08%20123309.png)
+![Prime Numbers Request](primeFirstRequest.png)
 
 **Second Request**:
-![Prime Numbers Response](Screenshot%202024-06-08%20123319.png)
+![Prime Numbers Response](primeSecondRequest.png)
 
 ### Test Case 2: Fibonacci Numbers
 
 **Request**: `GET http://localhost:8080/numbers/f`
 
 **First Request**:
-![Fibonacci Numbers Request](Screenshot%202024-06-08%20123205.png)
+![Fibonacci Numbers Request](fibbFirstRequest.png)
 
 **Second Request**:
-![Fibonacci Numbers Response](Screenshot%202024-06-08%20123214.png)
+![Fibonacci Numbers Response](fibbSecondRequest.png)
 
 ### Test Case 3: Even Numbers
 
 **Request**: `GET http://localhost:8080/numbers/e`
 
 **First Request**:
-![Even Numbers Request](Screenshot%202024-06-08%20123226.png)
+![Even Numbers Request](evenFirstRequest.png)
 
 **Second Request**:
-![Even Numbers Response](Screenshot%202024-06-08%20123250.png)
+![Even Numbers Response](evenSecondRequest.png)
 
 ### Test Case 4: Random Numbers
 
 **Request**: `GET http://localhost:8080/numbers/r`
 
 **First Request**:
-![Random Numbers Request](Screenshot%202024-06-08%20123515.png)
+![Random Numbers Request](randomFirstRequest.png)
 
 **Second Request**:
-![Random Numbers Response](Screenshot%202024-06-08%20123524.png)
+![Random Numbers Response](randomSecondRequest.png)
 
 ## Conclusion
 
