@@ -24,7 +24,6 @@ public class NumberService {
         List<Integer> newNumbers = fetchNumbersFromUrl(numberId);
         LinkedList<Integer> window = windows.getOrDefault(numberId, new LinkedList<>());
 
-        // Save previous state
         List<Integer> prevState = new ArrayList<>(window);
 
 
@@ -55,8 +54,7 @@ public class NumberService {
             connection.setConnectTimeout(500);
             connection.setReadTimeout(500);
 
-            // Add bearer token to request headers
-            connection.setRequestProperty("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzE3ODI2Mjc1LCJpYXQiOjE3MTc4MjU5NzUsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6IjRmNmVjZTExLTgxZDYtNDAyMy1hNDdhLWQwM2ZkODBlZTA2YSIsInN1YiI6IlNhamFsMjExNTQwNkBha2dlYy5hYy5pbiJ9LCJjb21wYW55TmFtZSI6ImdvTWFydCIsImNsaWVudElEIjoiNGY2ZWNlMTEtODFkNi00MDIzLWE0N2EtZDAzZmQ4MGVlMDZhIiwiY2xpZW50U2VjcmV0IjoiaGdSTFpnY2tjY3pDcWNWTyIsIm93bmVyTmFtZSI6IlNhamFsIiwib3duZXJFbWFpbCI6IlNhamFsMjExNTQwNkBha2dlYy5hYy5pbiIsInJvbGxObyI6IjIxMDAyNzE1NDAwNDcifQ.MS4gtRofq9UwR8WOXG47U-quQ-nRk3s3BdpquDmVbEI");
+            connection.setRequestProperty("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzE3ODI4NjQ0LCJpYXQiOjE3MTc4MjgzNDQsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6IjRmNmVjZTExLTgxZDYtNDAyMy1hNDdhLWQwM2ZkODBlZTA2YSIsInN1YiI6IlNhamFsMjExNTQwNkBha2dlYy5hYy5pbiJ9LCJjb21wYW55TmFtZSI6ImdvTWFydCIsImNsaWVudElEIjoiNGY2ZWNlMTEtODFkNi00MDIzLWE0N2EtZDAzZmQ4MGVlMDZhIiwiY2xpZW50U2VjcmV0IjoiaGdSTFpnY2tjY3pDcWNWTyIsIm93bmVyTmFtZSI6IlNhamFsIiwib3duZXJFbWFpbCI6IlNhamFsMjExNTQwNkBha2dlYy5hYy5pbiIsInJvbGxObyI6IjIxMDAyNzE1NDAwNDcifQ.8by9n-k79w9rKWzPxHgKtsPQ8fScPpOs_7bva9sUiFw");
 
             connection.setRequestMethod("GET");
 
@@ -69,7 +67,7 @@ public class NumberService {
                     response.append(line);
                 }
                 in.close();
-                return parseNumbers(response.toString());
+                List<Integer> numbers = parseNumbers(response.toString());
             } else if (responseCode == 401) {
                 System.err.println("Unauthorized access: Received 401 status code.");
 
