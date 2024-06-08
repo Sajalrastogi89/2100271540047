@@ -1,5 +1,6 @@
 package com.example.Project1.Controller;
 
+import com.example.Project1.DTO.AverageResponse;
 import com.example.Project1.Service.NumberService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
