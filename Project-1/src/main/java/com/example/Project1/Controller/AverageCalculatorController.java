@@ -25,8 +25,6 @@ public class AverageCalculatorController {
         try {
             AverageResponse response = numberService.getNumbers(numberId);
             return ResponseEntity.ok(response);
-        } catch (TimeoutException e) {
-            return ResponseEntity.status(504).build();
         } catch (Exception e) {
             return ResponseEntity.status(500).build();
         }
